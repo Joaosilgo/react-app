@@ -3,8 +3,8 @@
 # GitHub Host React App
 
 ## Go to Terminal of visual Code
-## npm npm init react-app <app-name>
-## cd <app-name>
+## npm npm init react-app < app-name >
+## cd < app-name >
 ### wait for librarys to load
 ## npm start
 ## open in localhost
