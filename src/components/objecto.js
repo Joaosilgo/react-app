@@ -11,9 +11,9 @@ const Objecto = (props) => {
     
         <div className="container">
             <img src={props.image}/> 
-            <p className="flow-text"> ID: {props.id}  </p>
-            <p className="flow-text"> Name: {props.name}  </p>
-            <p className="flow-text"> Description: {props.description}  </p>
+            <p className="flow-text">ID: {props.id}  </p>
+            <p className="flow-text">Name: {props.name}  </p>
+            <p className="flow-text">Description: {props.description}  </p>
             
         </div>
      )
