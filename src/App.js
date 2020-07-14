@@ -5,16 +5,38 @@ import Home from './components/home';
 import Objectos from './components/objectos';
 import { BrowserRouter , Route} from 'react-router-dom';
 
+import firebase from './components/firebase';
+
 
 //import './App.css';
 import 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import { Link} from 'react-router-dom';
+import Object_detail from './components/object_detail';
+import Objetos from './components/objectos';
 
+
+firebase.firestore().collection('time').add(
+  {
+    title:'Joao Gomes'
+  }
+)
+
+
+firebase.firestore().collection('utilizadores').get().then((snapshot) =>
+
+snapshot.docs.forEach( doc => {
+  console.log(doc.data())
+})
+
+)
 
 
 class App extends Component {
+
+  
+
 
   //function App() {
   componentDidMount() {
@@ -54,13 +76,15 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar title="React App" />
-          <Route exact path="/" render={() => <Home title="Home" />} />
-          <Route  path="/objectos" render={() => <Objectos title="Lista de Objectos" />} />
+          <Route  exact path={"/"} render={() => <Home title="Home" />} />
+          <Route  path="/objectos" render={() => <Object_detail title="Objecto" />} />
+          
           <ul id="slide-out" className="sidenav">
             <li><Link exact to="/">Home</Link></li>
             <li><Link to="/objectos">Objectos</Link></li>
             <li><Link to="/">About</Link></li>
           </ul>
+          
         </div>
       </BrowserRouter>
     );

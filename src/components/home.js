@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 
 import 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
-import M from  'materialize-css/dist/js/materialize.min.js';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 
-const Home =(props) => (
-   
+const Home = (props) => (
+
 
     <div className="container">
-<h2>{props.title}</h2>
+        <h2>{props.title}</h2>
 
 
 
