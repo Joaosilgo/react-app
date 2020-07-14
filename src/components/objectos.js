@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link} from 'react-router-dom';
 
 import 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
@@ -14,13 +15,16 @@ const Objetos = (props) => {
       //  <h1>{item.img_src}</h1>
 
       <div className="col s12 m4">
-        <div className="card Medium">
+        <div className="card Medium z-depth-5" >
           <div className="card-image waves-effect waves-block waves-light">
             <img className="activator" src={item.img_src} />
           </div>
           <div className="card-content">
             <span className="card-title activator grey-text text-darken-4">{item.name}<i className="material-icons right">more_vert</i></span>
-            <p><a href={item.url}>Go to Object</a></p>
+            <div className="card-action">
+            <p><Link to={`/objectos/${item.id}`}>Go to Object</Link></p>
+        </div>
+           
           </div>
           <div className="card-reveal">
             <span className="card-title grey-text text-darken-4">{item.name}<i className="material-icons right">close</i></span>

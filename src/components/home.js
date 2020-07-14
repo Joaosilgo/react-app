@@ -8,12 +8,16 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 const Home = (props) => (
 
 
-    <div className="container">
+    
         <h2>{props.title}</h2>
 
 
+       
+      
 
-    </div>
+
+    
+  
 
 
 );
