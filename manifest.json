@@ -21,5 +21,10 @@
   "start_url": "/react-app",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "orientation": "any",
+  "lang": "pt",
+  "description": "Create React App Sample",
+  "scope":"/react-app"
 }
